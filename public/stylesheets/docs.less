@@ -8,6 +8,7 @@ body {
   height: 10px;
   position: fixed;
   top: 0;
+  z-index: 9;
   background-color: #24abeb;
   .one, .two, .three {
     height: 10px;
@@ -52,7 +53,7 @@ body {
     li {
       height: 45px;
       line-height: 45px;
-      border-bottom: 1px solid #1F8FC4;
+      border-bottom: 1px solid rgb(59, 186, 247);
       &:last-child {
         border: none;
       }
@@ -115,7 +116,35 @@ body {
 .bs-docs-content {
   margin-top: 55px;
   color: #555;
+  .link {
+    position: fixed;
+    right: 70px;
+    top: 10px;
+    width: 265px;
+    height: 40px;
+    a {
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .source {
+      width: 117px;
+      background-color: #f50;
+    }
+    .home {
+      width: 148px;
+      background-color: #008f68;
+    }
+  }
   h1 {
+    display: none;
+  }
+  h1.title {
+    display: block;
     font-size: 48px;
     font-weight: 500;
     color: #333;
@@ -159,6 +188,12 @@ body {
   pre.prettyprint{
     padding: 8px 10px;
     border: 1px solid #ccc;
+  }
+  table {
+    width: auto;
+    th, td {
+      padding: 6px 13px;
+    }
   }
 }
 /* Responsive
@@ -209,6 +244,9 @@ body {
     padding-right: 20px;
     .bs-docs-sidebar{
       display: none;
+    }
+    .bs-docs-content{
+      width: 95%;
     }
   }
 }
